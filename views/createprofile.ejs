@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head') %>
+    <title>create-profile</title>
+</head>
+<body>
+    <%- include('./partials/nav') %>
+    <div class="container mt-3">
+        <div class="container mt-4">
+            <form action="/profile/createprofile" method="post" enctype="multipart/form-data" >
+                <div class="mb-3">
+                  <label  class="form-label">Name</label>
+                  <input type="text"
+                   class="form-control" 
+                   id="Name"
+                   aria-describedby="Name"
+                   name="Name">
+                </div>
+                <div class="mb-3">
+                  <label  class="form-label">Residential Place</label>
+                  <input type="text"
+                   class="form-control" 
+                   id="ResidentialPlace"
+                   aria-describedby="ResidentialPlace"
+                   name="ResidentialPlace">
+                </div>
+                <div class="mb-3">
+                  <label  class="form-label">Work-Experience</label>
+                  <input type="number"
+                   class="form-control" 
+                   id="WorkExperience"
+                   aria-describedby="WorkExperience"
+                   name="WorkExperience">
+                </div>
+                <div class="mb-3">
+                  <label for="CoverImage" class="form-label">Profile Image</label>
+                  <input type="file" 
+                  class="form-control" 
+                  id="ProfileImage" 
+                  name="ProfileImage" 
+                  aria-describedby="ProfileImage">
+                </div>
+              <div class="mb-3">
+                <label class="form-label">Contact no</label>
+                <input type="number"
+                 class="form-control" 
+                 id="Contactno"
+                 name="Contactno">
+              </div>
+              <div class="mb-3">
+                  <label for="body">Event Categories</label>
+                  <textarea class="form-control"
+                   id="EventCategories"
+                   name="EventCategories" 
+                   style="height: 100px" placeholder="Birthday party,College events,Receptions,Mehndi..."></textarea>
+                </div>
+                  <div class="mb-3">
+                    <button class="btn btn-primary">Submit</button>
+                  </div>
+              </form>
+            </div>
+        </div>
+</body>
+</html>

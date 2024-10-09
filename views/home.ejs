@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head') %>
+    <title>Home</title>
+</head>
+<body>
+    <%- include('./partials/nav') %>
+    <% if (locals.profiles) { %>
+        <div class="container mt-3">
+            <div class="row row-cols-4">
+        <% profiles.forEach(profile => { %>
+            <div class="col">
+            <div class="card" style="width: 15rem;">
+                <img src="<%= profile.ProfileImageURL %>" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title"><%= profile.Name %></h5>
+                  <p class="card-text">From:<%=profile.Residentialplace%></p>
+                  <p class="card-text">Categories:<%=profile.EventCategories%></p>
+                  <a href="/profile/<%=profile._id%>" class="btn btn-primary">view</a>
+                </div>
+              </div>
+            </div>
+        <% }) %>
+            </div>
+        </div>
+    <% } %>
+    <%- include('./partials/script') %>
+</body>
+</html>

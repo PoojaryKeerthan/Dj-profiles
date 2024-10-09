@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head') %>
+    <title>ProfileView</title>
+</head>
+<body>
+    <%- include('./partials/nav') %>
+    <div class="container mt-3">
+    <div class="row row-cols-4">
+    <div class="card mb-3" style="width: 1500px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="<%= profile.ProfileImageURL %>" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h1 class="card-title"><%= profile.Name %></h1>
+              <p class="card-text">A good DJ combines a deep knowledge of music with technical skill and creativity to deliver an engaging performance. They excel at reading the crowd and adjusting their set to match the audience's mood and energy. Professionalism, adaptability, and effective use of DJ equipment and software are essential traits. By blending tracks seamlessly, incorporating unique remixes, and interacting with the audience, a skilled DJ creates memorable experiences that keep the crowd energized and entertained.</p>
+              <h4>My details:</h4>
+              <p class="card-text"><small class="text-body-secondary"></small></p>
+              <p>
+                <b>Residentialplace:</b> <%= profile.Residentialplace %>
+                <br>
+                <b>WorkExperience :</b> <%= profile.WorkExperience %> years
+                <br>
+                <b>contactno:</b> <%= profile.contactno %>
+                <br>
+                <b>EventCategories:</b> <%= profile.EventCategories %>
+                <br>
+                <b>Email:</b> <%= profile.createdBy.email %>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+    <%- include('./partials/script') %>
+</body>
+</html>
